@@ -37,11 +37,11 @@ int main (void)
 	} */
 
 	// ft_isprint
-	while (katchau++ < 257)
+	/* while (katchau++ < 257)
 	{
 		printf("katchau = %d = meu = %d dele = %d\n", \
 		katchau, ft_isprint(katchau), isprint(katchau));
-	}
+	} */
 
 	// ft_bzero
 	/* (void)	katchau;
@@ -439,6 +439,21 @@ int main (void)
     printf("%s\n", ft_strnstr(hay1, needle1, 10));
     printf("%s\n", strnstr(hay2, needle2, 70));
     printf("%s\n", ft_strnstr(hay2, needle2, 70)); */
+
+	/* // ft_atoi
+	(void)	katchau;
+	printf("-a    = %d\n", ft_atoi("-a"));
+	printf("-1    = %d\n", ft_atoi("\n\t-1"));
+	printf("-1234 = %d\n", ft_atoi("-1234"));
+	printf("1     = %d\n", ft_atoi("1"));
+	printf("1234  = %d\n", ft_atoi("1234"));
+	printf("0     = %d\n", ft_atoi("0"));
+	printf("++1   = %d\n", ft_atoi("++1"));
+	printf("+1    = %d\n", ft_atoi("+1"));
+	printf("-1    = %d\n", ft_atoi("-1"));
+	printf("0     = %d\n", ft_atoi("0"));
+	printf("+42lyon= %d\n", ft_atoi("+42lyon"));
+	printf("+101  = %d\n", ft_atoi("+101")); */
 
 	return (0);
 }
