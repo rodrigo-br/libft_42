@@ -15,14 +15,14 @@ int main (void)
 		katchau, ft_isalnum(katchau), isalnum(katchau));
 	} */
 
-	/* // ft_isalpha
+	/* // ft_isalpha	
 	while (katchau++ < 257)
 	{
 		printf("katchau = %d = meu = %d dele = %d\n", \
 		katchau, ft_isalpha(katchau), isalpha(katchau));
 	} */
-
-	/* // ft_isascii
+/* 
+	// ft_isascii
 	while (katchau++ < 257)
 	{
 		printf("katchau = %d = meu = %d dele = %d\n", \
@@ -37,11 +37,11 @@ int main (void)
 	} */
 
 	// ft_isprint
-	/* while (katchau++ < 257)
+	while (katchau++ < 257)
 	{
 		printf("katchau = %d = meu = %d dele = %d\n", \
 		katchau, ft_isprint(katchau), isprint(katchau));
-	} */
+	}
 
 	// ft_bzero
 	/* (void)	katchau;
@@ -281,7 +281,7 @@ int main (void)
     // printf("dele = %s\n", stringss20); // size > src, muitos caracteres
 
 	/* // ft_toupper
-	while (katchau++ < 257)
+	while (katchau++ < 260)
 	{
 		printf("katchau = %d = meu = %d dele = %d\n", \
 		katchau, ft_toupper(katchau), toupper(katchau));
@@ -394,7 +394,7 @@ int main (void)
 	printf("meu  = %d\n", ft_memcmp(s6, s7, 4));
 	printf("dele = %d\n", memcmp(s6, s7, 4)); */
 
-	// ft_strncmp
+	/* // ft_strncmp
 	(void) katchau;
 	printf("TEST 1\nmeu  = %d\n", ft_strncmp("t", "", 0));
 	printf("dele = %d\n", strncmp("t", "", 0));
@@ -423,9 +423,22 @@ int main (void)
 	printf("TEST 13\nmeu  = %d\n", ft_strncmp("1", "", 1));
 	printf("dele  = %d\n", strncmp("1", "", 1));
 	printf("TEST 14\nmeu  = %d\n", ft_strncmp("", "", 1));
-	printf("dele  = %d\n", strncmp("", "", 1));
+	printf("dele  = %d\n", strncmp("", "", 1)); */
 
+	/* // ft_strnstr
+	(void) katchau;
+    char teste[] = "lorem ipsum dolor sit amet";
 
+    printf("%s\n", strnstr(teste, "lorem", 15));
+    printf("%s\n", ft_strnstr(teste, "lorem", 15));
+	const char *hay1 = "Foo Bar Baz";
+    const char *needle1 = "Bar";
+    char *hay2 = "la da\ndoo a da\nnow here comes the stack\nok there it was.\n stackdummy";
+    char *needle2 = "stackdummy";
+    printf("%s\n", strnstr(hay1, needle1, 10));
+    printf("%s\n", ft_strnstr(hay1, needle1, 10));
+    printf("%s\n", strnstr(hay2, needle2, 70));
+    printf("%s\n", ft_strnstr(hay2, needle2, 70)); */
 
 	return (0);
 }

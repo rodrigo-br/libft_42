@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 01:03:12 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/01 17:58:51 by ralves-b         ###   ########.fr       */
+/*   Created: 2022/06/01 18:10:33 by ralves-b          #+#    #+#             */
+/*   Updated: 2022/06/01 18:10:52 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int		ft_atoi(const char *nptr)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (8);
-	return (0);
+
 }

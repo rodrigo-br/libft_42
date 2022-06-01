@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:46:38 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/01 00:26:13 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/01 17:36:11 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_atoi(const char *nptr);
 
 #endif
