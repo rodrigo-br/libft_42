@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:55:37 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/05/31 20:55:18 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/01 21:55:41 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int	ft_toupper(int c)
 {
-	if (c == -1)
-		return (-1);
-	else if (c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
-	else if (c < 0)
+	else if (c < -1)
 	{
 		c = (unsigned char)c;
 		return ((int)c);

@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:13:07 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/05/31 20:55:55 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/01 22:59:16 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int	ft_tolower(int c)
 {
-	if (c == -1)
-		return (-1);
-	else if (c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
-	else if (c < 0)
+	else if (c < -1)
 	{
 		c = (unsigned char)c;
 		return ((int)c);

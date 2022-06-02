@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:43:56 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/02 17:52:05 by ralves-b         ###   ########.fr       */
+/*   Created: 2022/06/02 15:54:24 by ralves-b          #+#    #+#             */
+/*   Updated: 2022/06/02 17:01:50 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s)
 {
-	int		rev_index;
-	char	*pointer;
+	char	*new_str;
+	int		index;
 
-	rev_index = ft_strlen(s);
-	if (!rev_index)
-		return (NULL);
-	else if (!c)
+	index = 0;
+	new_str = malloc(ft_strlen(s) * sizeof(char) + 1);
+	if (!new_str)
+		return (new_str);
+	while (s[index])
 	{
-		pointer = (char *)&s[rev_index];
-		return (pointer);
+		new_str[index] = s[index];
+		index++;
 	}
-	while (rev_index--)
-	{
-		if (s[rev_index] == (char)c)
-		{
-			pointer = (char *)&s[rev_index];
-			return (pointer);
-		}
-	}
-	return (NULL);
+	new_str[index] = '\0';
+	return (new_str);
 }

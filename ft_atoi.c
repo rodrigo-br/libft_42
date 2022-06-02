@@ -6,13 +6,13 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:10:33 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/01 19:46:21 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/01 19:52:52 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	signal;
 	int	result;

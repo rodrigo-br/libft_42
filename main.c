@@ -2,6 +2,7 @@
 #include <ctype.h> // is_*
 #include <bsd/string.h> // strlcat / strlcpy
 #include "libft.h"
+#include <stdint.h> // SIZE_MAX
 
 int main (void)
 {
@@ -142,80 +143,8 @@ int main (void)
     memmove(strings20, strings10, 15);
     printf("dele = %s\n", strings20); // dest < src, muitos caracteres */
 
-	// ft_strlcpy NÍVEL HARD
+	// ft_strlcpy
 	// (void) katchau;
-	// char *string_10;
-    // char *string_20;
-    // string_10 = strdup("abcdefgh");
-    // string_20 = string_10 + 4;
-    // printf("return = %ld\n", ft_strlcpy(string_10, string_20, 5));
-    // printf("meu  = %s\n", string_10);
-	// char *string_1;
-    // char *string_2;
-    // string_1 = strdup("abcdefgh");
-    // string_2 = string_1 + 4;
-    // printf("return = %ld\n", strlcpy(string_1, string_2, 5));
-    // printf("dele = %s\n\n", string_1); // dest > src, poucos caracteres
-	// char *strings_10;
-    // char *strings_20;
-    // strings_10 = strdup("abcdefgh");
-    // strings_20 = strings_10 + 4;
-    // printf("return = %ld\n", ft_strlcpy(strings_20, strings_10, 5));
-    // printf("meu  = %s\n", strings_20);
-	// char *strings_1;
-    // char *strings_2;
-    // strings_1 = strdup("abcdefgh");
-    // strings_2 = strings_1 + 4;
-    // printf("return = %ld\n", strlcpy(strings_2, strings_1, 5));
-    // printf("dele = %s\n\n", strings_2);	// dest < src, poucos caracteres
-	// char *string1;
-    // char *string2;
-    // string1 = strdup("abcdefghijklmnopq0123456789");
-    // string2 = string1 + 4;
-    // printf("return = %ld\n", ft_strlcpy(string1, string2, 15));
-    // printf("meu  = %s\n", string1);
-	// char *string10;
-    // char *string20;
-    // string10 = strdup("abcdefghijklmnopq0123456789");
-    // string20 = string10 + 4;
-    // printf("return = %ld\n", strlcpy(string10, string20, 15));
-    // printf("dele = %s\n\n", string10); // dest > src, muitos caracteres
-	// char *strings1;
-    // char *strings2;
-    // strings1 = strdup("abcdefghijklmnopq0123456789");
-    // strings2 = strings1 + 4;
-    // printf("return = %ld\n", ft_strlcpy(strings2, strings1, 20));
-    // printf("meu  = %s\n", strings2);
-	// char *strings10;
-    // char *strings20;
-    // strings10 = strdup("abcdefghijklmnopq0123456789");
-    // strings20 = strings10 + 4;
-    // printf("return = %ld\n", strlcpy(strings20, strings10, 20));
-    // printf("dele = %s\n\n", strings20); // dest < src, muitos caracteres
-	// char *stringss1;
-    // char *stringss2;
-    // stringss1 = strdup("abcdefghijklmnopq0123456789");
-    // stringss2 = stringss1 + 2;
-    // printf("return = %ld\n", ft_strlcpy(stringss2, stringss1, 40));
-    // printf("meu  = %s\n", stringss2);
-	// char *stringss10;
-    // char *stringss20;
-    // stringss10 = strdup("abcdefghijklmnopq0123456789");
-    // stringss20 = stringss10 + 2;
-    // printf("return = %ld\n", strlcpy(stringss20, stringss10, 40));
-    // printf("dele = %s\n", stringss20); // size > src, muitos caracteres
-	// char *stringx1;
-    // char *stringx2;
-    // stringx1 = strdup("");
-    // stringx2 = stringx1;
-    // printf("return = %ld\n", ft_strlcpy(stringx2, stringx1, 40));
-    // printf("meu  = %s\n", stringx2);
-	// char *stringx10;
-    // char *stringx20;
-    // stringx10 = strdup("");
-    // stringx20 = stringx10;
-    // printf("return = %ld\n", strlcpy(stringx20, stringx10, 40));
-    // printf("dele = %s\n", stringx20); // size > src, muitos caracteres
     // char *dest;
     // dest = (char *)malloc(sizeof(*dest) *15);
     // memset(dest, 0, 15);
@@ -230,55 +159,77 @@ int main (void)
     // write(1, dest, 15);
     // printf("\n%ld\n", ft_strlcpy(dest, "", 15));
     // write(1, dest, 15);
+	// memset(dest, 0, 15);
+    // memset(dest, 'r', 6);
+    // printf("%ld\n", ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
+    // printf("meu  = %s\n",dest);
     // memset(dest, 0, 15);
     // memset(dest, 'r', 6);
     // printf("\n%ld\n", strlcpy(dest, "lorem ipsum dolor sit amet", 0));
-    // printf("dest: %s\n",dest);
-    // printf("%ld\n", ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
-    // printf("dest: %s\n",dest);
+    // printf("dele = %s\n",dest);
+	// char src[] = "coucou";
+	// char dest_xablau[10]; memset(dest_xablau, 'A', 10);
+	// printf("%ld\n", ft_strlcpy(dest_xablau, src, 1));
+	// printf("meu  = %s\n",dest_xablau);
+	// memset(dest_xablau, 'A', 10);
+	// printf("%ld\n", strlcpy(dest_xablau, src, 1));
+	// printf("dele  = %s\n",dest_xablau);
+	// memset(dest_xablau, 'A', 10);
+	// printf("%ld\n", ft_strlcpy(dest_xablau, src, 2));
+	// printf("meu  = %s\n",dest_xablau);
+	// memset(dest_xablau, 'A', 10);
+	// printf("%ld\n", strlcpy(dest_xablau, src, 2));
+	// printf("dele  = %s\n",dest_xablau);
+	// memset(dest_xablau, 'A', 10);
+	// printf("%ld\n", ft_strlcpy(dest_xablau, src, 6));
+	// printf("meu  = %s\n",dest_xablau);
+	// memset(dest_xablau, 'A', 10);
+	// printf("%ld\n", strlcpy(dest_xablau, src, 6));
+	// printf("dele  = %s\n",dest_xablau);
+	
+	/* // ft_strlcat
+	(void)	katchau;
+	char string_10[] = "abcdefgh";
+    char string_20[] = "0123456789";
+    printf("TEST 1\nreturn = %ld\n", ft_strlcat(string_10, string_20, 1));
+    printf("meu  = %s\n", string_10);
+	char string_1[] = "abcdefgh";
+    char string_2[] = "0123456789";
+    printf("return = %ld\n", strlcat(string_1, string_2, 1));
+    printf("dele = %s\n\n", string_1); // dest > src, poucos caracteres
+	char strings_10[] = "abcdefgh";
+    char strings_20[] = "abcdefgh";
+    printf("TEST 2\nreturn = %ld\n", ft_strlcat(strings_20, strings_10, 5));
+    printf("meu  = %s\n", strings_20);
+	char strings_1[] = "abcdefgh";
+    char strings_2[] = "abcdefgh";
+    printf("return = %ld\n", strlcat(strings_2, strings_1, 5));
+    printf("dele = %s\n\n", strings_2);	// dest < src, poucos caracteres
+	char string1[] = "abcdefghijklmnopq0123456789";
+    char string2[] = "abcdefgh";
+    printf("TEST 3\nreturn = %ld\n", ft_strlcat(string1, string2, 15));
+    printf("meu  = %s\n", string1);
+	char string10[] = "abcdefghijklmnopq0123456789";
+    char string20[] = "abcdefgh";
+    printf("return = %ld\n", strlcat(string10, string20, 15));
+    printf("dele = %s\n\n", string10); // dest > src, muitos caracteres
+	char strings1[] = "abcdefghijklmnopq0123456789";
+    char strings2[] = "abcdefgh";
+    printf("TEST 4\nreturn = %ld\n", ft_strlcat(strings2, strings1, 20));
+    printf("meu  = %s\n", strings2);
+	char strings10[] = "abcdefghijklmnopq0123456789";
+    char strings20[] = "abcdefgh";
+    printf("return = %ld\n", strlcat(strings20, strings10, 20));
+    printf("dele = %s\n\n", strings20); // dest < src, muitos caracteres
+	char stringss1[]= "abcdefghijklmnopq0123456789";
+    char stringss2[]= "abcdefgh";
+    printf("TEST 5\nreturn = %ld\n", ft_strlcat(stringss2, stringss1, 40));
+    printf("meu  = %s\n", stringss2);
+	char stringss10[] = "abcdefghijklmnopq0123456789";
+    char stringss20[] = "abcdefgh";
+    printf("return = %ld\n", strlcat(stringss20, stringss10, 40));
+    printf("dele = %s\n", stringss20); // size > src, muitos caracteres */
 
-	// ft_strlcat
-	// (void)	katchau;
-	// char string_10[] = "abcdefgh";
-    // char string_20[] = "0123456789";
-    // printf("TEST 1\nreturn = %ld\n", ft_strlcat(string_10, string_20, 5));
-    // printf("meu  = %s\n", string_10);
-	// char string_1[] = "abcdefgh";
-    // char string_2[] = "0123456789";
-    // printf("return = %ld\n", strlcat(string_1, string_2, 5));
-    // printf("dele = %s\n\n", string_1); // dest > src, poucos caracteres
-	// char strings_10[] = "abcdefgh";
-    // char strings_20[] = "abcdefgh";
-    // printf("TEST 2\nreturn = %ld\n", ft_strlcat(strings_20, strings_10, 5));
-    // printf("meu  = %s\n", strings_20);
-	// char strings_1[] = "abcdefgh";
-    // char strings_2[] = "abcdefgh";
-    // printf("return = %ld\n", strlcat(strings_2, strings_1, 5));
-    // printf("dele = %s\n\n", strings_2);	// dest < src, poucos caracteres
-	// char string1[] = "abcdefghijklmnopq0123456789";
-    // char string2[] = "abcdefgh";
-    // printf("TEST 3\nreturn = %ld\n", ft_strlcat(string1, string2, 15));
-    // printf("meu  = %s\n", string1);
-	// char string10[] = "abcdefghijklmnopq0123456789";
-    // char string20[] = "abcdefgh";
-    // printf("return = %ld\n", strlcat(string10, string20, 15));
-    // printf("dele = %s\n\n", string10); // dest > src, muitos caracteres
-	// char strings1[] = "abcdefghijklmnopq0123456789";
-    // char strings2[] = "abcdefgh";
-    // printf("TEST 4\nreturn = %ld\n", ft_strlcat(strings2, strings1, 20));
-    // printf("meu  = %s\n", strings2);
-	// char strings10[] = "abcdefghijklmnopq0123456789";
-    // char strings20[] = "abcdefgh";
-    // printf("return = %ld\n", strlcat(strings20, strings10, 20));
-    // printf("dele = %s\n\n", strings20); // dest < src, muitos caracteres
-	// char stringss1[]= "abcdefghijklmnopq0123456789";
-    // char stringss2[]= "abcdefgh";
-    // printf("TEST 5\nreturn = %ld\n", ft_strlcat(stringss2, stringss1, 40));
-    // printf("meu  = %s\n", stringss2);
-	// char stringss10[] = "abcdefghijklmnopq0123456789";
-    // char stringss20[] = "abcdefgh";
-    // printf("return = %ld\n", strlcat(stringss20, stringss10, 40));
-    // printf("dele = %s\n", stringss20); // size > src, muitos caracteres
 
 	/* // ft_toupper
 	while (katchau++ < 260)
@@ -310,39 +261,39 @@ int main (void)
 	char string1[] = "abcdefgh";
     printf("dele = %s\n", strchr(string1, ' ')); */
 
-	/* // ft_strrchr
-	(void) katchau;
+	// ft_strrchr
+	// (void) katchau;
 
-	char string_10[] = "abcdefghabcdefghabcdefgh";
-    printf("TEST 1\nmeu  = %s\n", ft_strrchr(string_10, 'e'));
-	char string_1[] = "abcdefghabcdefghabcdefgh";
-    printf("dele = %s\n", strrchr(string_1, 'e'));
-	char string[] = "abcdefghabcdefghabcdefgh";
-    printf("TEST 2\nmeu  = %s\n", ft_strrchr(string, '\0'));
-	char stringx[] = "abcdefghabcdefghabcdefgh";
-    printf("dele = %s\n", strrchr(stringx, '\0'));
-	char string10[] = "abcdefghabcdefghabcdefgh";
-    printf("TEST 3\nmeu  = %s\n", ft_strrchr(string10, ' '));
-	char string1[] = "abcdefghabcdefghabcdefgh";
-    printf("dele = %s\n", strrchr(string1, ' '));
-	char s[] = "tripouille";
-	char s2[] = "ltripouiel";
-	printf("TEST 4\nmeu  = %s\n", ft_strrchr(s, 't'));
-	printf("dele = %s\n", strrchr(s, 't'));
-	printf("TEST 5\nmeu  = %s\n", ft_strrchr(s, 'l'));
-	printf("dele = %s\n", strrchr(s, 'l'));
-	printf("TEST 6\nmeu  = %s\n", ft_strrchr(s2, 'l'));
-	printf("dele = %s\n", strrchr(s2, 'l'));
-	printf("TEST 7\nmeu  = %s\n", ft_strrchr(s, 'z'));
-	printf("dele = %s\n", strrchr(s, 'z'));
-	printf("TEST 8\nmeu  = %s\n", ft_strrchr(s, 0));
-	printf("dele = %s\n", strrchr(s, 0));
-	printf("TEST 9\nmeu  = %s\n", ft_strrchr(s, 't' + 256));
-	printf("dele = %s\n", strrchr(s, 't' + 256));
-	char * empty = (char*)calloc(1, 1);
-	printf("TEST 10\nmeu  = %s\n", ft_strrchr(empty, 'V'));
-	char * empty1 = (char*)calloc(1, 1);
-	printf("dele = %s\n", strrchr(empty1, 'V')); */
+	// char string_10[] = "abcdefghabcdefghabcdefgh";
+    // printf("TEST 1\nmeu  = %s\n", ft_strrchr(string_10, 'e'));
+	// char string_1[] = "abcdefghabcdefghabcdefgh";
+    // printf("dele = %s\n", strrchr(string_1, 'e'));
+	// char string[] = "abcdefghabcdefghabcdefgh";
+    // printf("TEST 2\nmeu  = %s\n", ft_strrchr(string, '\0'));
+	// char stringx[] = "abcdefghabcdefghabcdefgh";
+    // printf("dele = %s\n", strrchr(stringx, '\0'));
+	// char string10[] = "abcdefghabcdefghabcdefgh";
+    // printf("TEST 3\nmeu  = %s\n", ft_strrchr(string10, ' '));
+	// char string1[] = "abcdefghabcdefghabcdefgh";
+    // printf("dele = %s\n", strrchr(string1, ' '));
+	// char s[] = "tripouille";
+	// char s2[] = "ltripouiel";
+	// printf("TEST 4\nmeu  = %s\n", ft_strrchr(s, 't'));
+	// printf("dele = %s\n", strrchr(s, 't'));
+	// printf("TEST 5\nmeu  = %s\n", ft_strrchr(s, 'l'));
+	// printf("dele = %s\n", strrchr(s, 'l'));
+	// printf("TEST 6\nmeu  = %s\n", ft_strrchr(s2, 'l'));
+	// printf("dele = %s\n", strrchr(s2, 'l'));
+	// printf("TEST 7\nmeu  = %s\n", ft_strrchr(s, 'z'));
+	// printf("dele = %s\n", strrchr(s, 'z'));
+	// printf("TEST 8\nmeu  = %s\n", ft_strrchr(s, 0));
+	// printf("dele = %s\n", strrchr(s, 0));
+	// printf("TEST 9\nmeu  = %s\n", ft_strrchr(s, 't' + 256));
+	// printf("dele = %s\n", strrchr(s, 't' + 256));
+	// char * empty = (char*)calloc(1, 1);
+	// printf("TEST 10\nmeu  = %s\n", ft_strrchr(empty, 'V'));
+	// char * empty1 = (char*)calloc(1, 1);
+	// printf("dele = %s\n", strrchr(empty1, 'V'));
 
 	/* // ft_memchr
 	(void) katchau;
@@ -425,25 +376,34 @@ int main (void)
 	printf("TEST 14\nmeu  = %d\n", ft_strncmp("", "", 1));
 	printf("dele  = %d\n", strncmp("", "", 1)); */
 
-	/* // ft_strnstr
+	// ft_strnstr
 	(void) katchau;
     char teste[] = "lorem ipsum dolor sit amet";
-
-    printf("%s\n", strnstr(teste, "lorem", 15));
-    printf("%s\n", ft_strnstr(teste, "lorem", 15));
+    printf("meu  = %s\n", ft_strnstr(teste, "lorem", 15));
+	printf("dele = %s\n", strnstr(teste, "lorem", 15));
 	const char *hay1 = "Foo Bar Baz";
     const char *needle1 = "Bar";
     char *hay2 = "la da\ndoo a da\nnow here comes the stack\nok there it was.\n stackdummy";
     char *needle2 = "stackdummy";
-    printf("%s\n", strnstr(hay1, needle1, 10));
-    printf("%s\n", ft_strnstr(hay1, needle1, 10));
-    printf("%s\n", strnstr(hay2, needle2, 70));
-    printf("%s\n", ft_strnstr(hay2, needle2, 70)); */
+    printf("meu  = %s\n", ft_strnstr(hay1, needle1, 10));
+	printf("dele = %s\n", strnstr(hay1, needle1, 10));
+    printf("meu  = %s\n", ft_strnstr(hay2, needle2, 70));
+	printf("dele = %s\n", strnstr(hay2, needle2, 70));
+	char *empty = (char*)"";
+	printf("meu  = %s\n", ft_strnstr(empty, "", -1));
+	printf("dele = %s\n", strnstr(empty, "", -1));
+	printf("meu  = %s\n", ft_strnstr(empty, "", 0));
+	printf("dele = %s\n", strnstr(empty, "", 0));
+	char haystack[30] = "aaabcabcd";
+	printf("meu  = %s\n", ft_strnstr(haystack, "aaabc", 5));
+	printf("dele = %s\n", strnstr(haystack, "aaabc", 5));
+	printf("meu  = %s\n", ft_strnstr(haystack, "abcd", 9));
+	printf("dele = %s\n", strnstr(haystack, "abcd", 9));
 
 	/* // ft_atoi
 	(void)	katchau;
 	printf("-a    = %d\n", ft_atoi("-a"));
-	printf("-1    = %d\n", ft_atoi("\n\t-1"));
+	printf("-1    = %d\n", ft_atoi("\n\t -1"));
 	printf("-1234 = %d\n", ft_atoi("-1234"));
 	printf("1     = %d\n", ft_atoi("1"));
 	printf("1234  = %d\n", ft_atoi("1234"));
@@ -454,6 +414,25 @@ int main (void)
 	printf("0     = %d\n", ft_atoi("0"));
 	printf("+42lyon= %d\n", ft_atoi("+42lyon"));
 	printf("+101  = %d\n", ft_atoi("+101")); */
+	
+	/* // ft_calloc
+	(void) katchau;
+	void *p = ft_calloc(2, 2);
+	char e[] = {0, 0, 0, 0};
+	printf("%d\n", memcmp(p, e, 4));
+	free(p);
+	p = ft_calloc(SIZE_MAX, SIZE_MAX); */
 
+	/* // ft_strdup
+	(void) katchau;
+	char *s;
+	s = ft_strdup("coucou");
+	printf("%d", strcmp(s, "coucou"));
+	free(s);
+	
+	s = ft_strdup("");
+	printf("%d", strcmp(s, ""));
+	free(s); */
+	
 	return (0);
 }
