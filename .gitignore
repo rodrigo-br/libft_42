@@ -1,2 +1,4 @@
 libftTester
 libftTester/
+.gitignore
+*.o
