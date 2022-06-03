@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 22:38:45 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/02 23:44:48 by ralves-b         ###   ########.fr       */
+/*   Created: 2022/06/02 22:54:51 by ralves-b          #+#    #+#             */
+/*   Updated: 2022/06/03 03:46:15 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*aux_dest;
-	unsigned char	*aux_src;
+	char			*new_str;
+	unsigned int	s_len;
+	unsigned int	max_len;
 
-	aux_dest = (unsigned char *)dest;
-	aux_src = (unsigned char *)src;
-	if (!dest || !src)
-		return (dest);
-	if (ft_strlen(src) <= ft_strlen(dest))
-		ft_memcpy(dest, src, n);
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (s_len > start)
+		max_len = s_len - start;
 	else
-	{
-		while (n--)
-			(aux_dest)[n] = (aux_src)[n];
-	}
-	return (dest);
+		max_len = 0;
+	if (max_len > len)
+		max_len = len;
+	new_str = (char *)malloc((max_len + 1) * sizeof(char));
+	if (new_str == NULL)
+		return (NULL);
+	ft_strlcpy(new_str, s + start, max_len + 1);
+	return (new_str);
 }

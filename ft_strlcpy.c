@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 12:25:16 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/02 19:04:28 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/03 03:41:37 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	if (size > 0)
 		dst[index] = '\0';
+	else if (size == 0)
+		dst[ft_strlen(dst)] = '\0';
 	return (ft_strlen(src));
 }
