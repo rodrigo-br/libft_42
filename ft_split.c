@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:43:56 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/03 22:58:35 by ralves-b         ###   ########.fr       */
+/*   Created: 2022/06/04 01:18:30 by ralves-b          #+#    #+#             */
+/*   Updated: 2022/06/04 01:18:44 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	**ft_split(char const *s, char c)
 {
-	int		rev_index;
-	char	*pointer;
-
-	rev_index = ft_strlen(s);
-	if (!rev_index)
-		return (NULL);
-	else if (!c)
-	{
-		pointer = (char *)&s[rev_index];
-		return (pointer);
-	}
-	while (rev_index--)
-	{
-		if (s[rev_index] == (char)c)
-		{
-			pointer = (char *)&s[rev_index];
-			return (pointer);
-		}
-	}
-	return (NULL);
+	
 }
