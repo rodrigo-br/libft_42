@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 22:54:51 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/03 15:27:49 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/03 20:26:57 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*new_str;
 	unsigned int	s_len;
 	unsigned int	max_len;
-
+	//s = ft_substr("1", 42, 42000000) s_len 1, max_len = 0
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
+	if (start > s_len)
+        return (ft_strdup(""));
 	if (s_len > start)
 		max_len = s_len - start;
 	else
