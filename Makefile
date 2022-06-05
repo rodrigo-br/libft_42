@@ -7,6 +7,7 @@ SRC			=	./ft_bzero.c ft_isalnum.c ft_isalpha.c \
 				ft_strncmp.c ft_strnstr.c ft_atoi.c \
 				ft_calloc.c ft_strdup.c ft_substr.c \
 				ft_strjoin.c ft_strtrim.c ft_split.c \
+				ft_itoa.c \
 
 H_SRC		=	libft.h
 
@@ -14,7 +15,8 @@ OBJS		=	${SRC:.c=.o}
 
 NAME		=	libft.a
 
-FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror -g3
+#-fsanitize=address
 
 RM			=	rm -f
 
@@ -33,6 +35,6 @@ fclean:	clean
 		${RM} ${NAME}
 
 re:		fclean all
-		gcc -g3 ${FLAGS} main.c -lbsd ${NAME}
+		gcc ${FLAGS} main.c -lbsd ${NAME}
 
 .PHONY:	all clean fclean re

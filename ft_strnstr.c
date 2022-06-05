@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		len_little;
-	size_t		index;
+	size_t	len_little;
+	size_t	index;
 
 	index = 0;
 	len_little = ft_strlen(little);
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		if (big[index] == little[0])
 		{
 			if (!ft_strncmp(&big[index], little, len_little))
-				return((char *)&big[index]);
+				return ((char *)&big[index]);
 		}
 		index++;
 	}

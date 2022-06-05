@@ -6,19 +6,17 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:46:38 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/04 01:14:04 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/04 02:12:11 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <string.h>
-# include <strings.h>
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# include <stdio.h> // remover
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -47,5 +45,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+
+/**
+ * @brief Allocates (with malloc(3)) and returns a string
+ * representing the integer received as an argument.
+ * Negative numbers must be handled.
+ *
+ * @param n The integer to convert
+ * @return char* Returns the string representing the integer.
+ * NULL if the allocation fails.
+ */
+char	*ft_itoa(int n);
 
 #endif
