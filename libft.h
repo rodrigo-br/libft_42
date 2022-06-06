@@ -376,7 +376,7 @@ char	*ft_itoa(int n);
  * @return 	The string created from the successive applications
  *			of ’f’ or returns NULL if the allocation fails.
  */
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
  * @brief 	Applies the function ’f’ on each character of
@@ -386,7 +386,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
  * @param s The string on which to iterate.
  * @param f The function to apply to each character.
  */
-void ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 /**
  * @brief 		Outputs the character ’c’ to the given file
@@ -394,7 +394,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*));
  * @param c 	The character to output.
  * @param fd 	The file descriptor on which to write.
  */
-void ft_putchar_fd(char c, int fd);
+void	ft_putchar_fd(char c, int fd);
 
 /**
  * @brief 		Outputs the string ’s’ to the given file
@@ -402,7 +402,7 @@ void ft_putchar_fd(char c, int fd);
  * @param s 	The string to output.
  * @param fd 	The file descriptor on which to write.
  */
-void ft_putstr_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 /**
  * @brief 		Outputs the string ’s’ to the given file 
@@ -410,7 +410,7 @@ void ft_putstr_fd(char *s, int fd);
  * @param s 	The string to output.
  * @param fd 	The file descriptor on which to write.
  */
-void ft_putendl_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 /**
  * @brief 		Outputs the integer ’n’ to the given file
@@ -418,6 +418,6 @@ void ft_putendl_fd(char *s, int fd);
  * @param n		The integer to output.
  * @param fd 	The file descriptor on which to write.
  */
-void ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
