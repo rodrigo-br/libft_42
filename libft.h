@@ -174,7 +174,7 @@ int		ft_toupper(int c);
        		verted letter, or c if the  conversion
        		was not possible.
  */
-int 	ft_tolower(int c);
+int		ft_tolower(int c);
 
 /**
  * @brief 	Returns  a pointer to
