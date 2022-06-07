@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char 			*new_str;
+	char			*new_str;
 	unsigned int	index;
 
 	index = 0;

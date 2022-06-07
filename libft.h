@@ -18,6 +18,8 @@
 
 # include <stdio.h> // DELETAR
 
+// ------------ PART 1 ---------------------------------
+
 /**
  * @brief 	Checks for an alphabetic character;
  *        	in the standard "C" locale,  it  is
@@ -186,7 +188,7 @@ int		ft_tolower(int c);
  *			acter or NULL if the character is not
  *			found
  */
-char 	*ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 
 /**
  * @brief 	Returns  a pointer to
@@ -198,7 +200,7 @@ char 	*ft_strchr(const char *s, int c);
  *			acter or NULL if the character is not
  *			found 
  */
-char 	*ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 /**
  * @brief 	scans the initial 
@@ -311,6 +313,8 @@ void	*ft_calloc(size_t nmemb, size_t size);
  */
 char	*ft_strdup(const char *s);
 
+//--------- PART 2  --------------------------------------------- //
+
 /**
  * @brief 		Allocates (with malloc(3)) and returns a substring
  * 				from the string ’s’.
@@ -419,5 +423,103 @@ void	ft_putendl_fd(char *s, int fd);
  * @param fd 	The file descriptor on which to write.
  */
 void	ft_putnbr_fd(int n, int fd);
+
+// ------------ BÔNUS -------------------------------------//
+
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+} t_list;
+
+/**
+ * @brief Allocates (with malloc(3)) and returns a new node.
+ *The member variable ’content’ is initialized with
+ *the value of the parameter ’content’. The variable
+ *’next’ is initialized to NULL.
+ * @param content The content to create the node with.
+ * @return The new node 
+ */
+t_list *ft_lstnew(void *content);
+
+/**
+ * @brief 		Adds the node ’new’ at the beginning of the list.
+ * @param lst 	The address of a pointer to the first link of
+ *				a list.
+ * @param new 	The address of a pointer to the node to be
+ *				added to the list.
+ */
+void ft_lstadd_front(t_list **lst, t_list *new);
+
+/**
+ * @brief 		Counts the number of nodes in a list.
+ * @param lst 	The beginning of the list.
+ * @return 		The length of the list
+ */
+int ft_lstsize(t_list *lst);
+
+/**
+ * @brief 		Returns the last node of the list.
+ * @param lst 	The beginning of the list.
+ * @return 		Last node of the list
+ */
+t_list *ft_lstlast(t_list *lst);
+
+/**
+ * @brief 		Adds the node ’new’ at the end of the list.
+ * @param lst 	The address of a pointer to the first link of
+ *				a list.
+ * @param new 	The address of a pointer to the node to be
+ *				added to the list.
+ */
+void ft_lstadd_back(t_list **lst, t_list *new);
+
+/**
+ * @brief 		Deletes and frees the given node and every
+ *				successor of that node, using the function ’del’
+ *				and free(3).
+ *				Finally, the pointer to the list must be set to
+ *				NULL.
+ * @param lst 	The node to free.
+ * @param del 	The address of the function used to delete
+ *				the content.
+ */
+void ft_lstdelone(t_list *lst, void (*del)(void*));
+
+/**
+ * @brief 		Deletes and frees the given node and every
+ *				successor of that node, using the function ’del’
+ *				and free(3).
+ *				Finally, the pointer to the list must be set to
+ *				NULL.
+ * @param lst 	The address of a pointer to a node.
+ * @param del 	The address of the function used to delete
+ *				the content of the node.
+ */
+void ft_lstclear(t_list **lst, void (*del)(void*));
+
+/**
+ * @brief 		Iterates the list ’lst’ and applies the function
+ *				’f’ on the content of each node.
+ * @param lst 	The address of a pointer to a node.
+ * @param f 	The address of the function used to iterate on
+ *				the list.
+ */
+void ft_lstiter(t_list *lst, void (*f)(void *));
+
+/**
+ * @brief 		Iterates the list ’lst’ and applies the function
+ *				’f’ on the content of each node. Creates a new
+ *				list resulting of the successive applications of
+ *				the function ’f’. The ’del’ function is used to
+ *				delete the content of a node if needed.
+ * @param lst 	The address of a pointer to a node.
+ * @param f 	The address of the function used to iterate on
+ *				the list.
+ * @param del 	The address of the function used to delete
+ *				the content of a node if needed.
+ * @return 		The new list or NULL if the allocation fails. 
+ */
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

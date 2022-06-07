@@ -14,7 +14,6 @@
 
 static char	*ft_rev_str(char *s);
 static char	*ft_malloc_size(int number);
-static char	*ft_return_min_size(int number);
 
 char	*ft_itoa(int n)
 {
@@ -22,7 +21,7 @@ char	*ft_itoa(int n)
 	int		index;
 
 	if (n == -2147483648)
-		return (ft_return_min_size(214748364));
+		return (ft_strdup("-2147483648"));
 	index = 1;
 	str = ft_malloc_size(n);
 	if (n < 0)
@@ -80,24 +79,4 @@ static char	*ft_rev_str(char *s)
 		len--;
 	}
 	return (s);
-}
-
-static char	*ft_return_min_size(int number)
-{
-	char	*s;
-	int		index;
-
-	index = 3;
-	s = (char *)malloc(sizeof(char) + (11));
-	s[0] = '-';
-	s[1] = '8';
-	s[2] = number / 1 % 10 + '0';
-	while (number / 10 != 0)
-	{
-		s[index] = number / 10 % 10 + '0';
-		number = number / 10;
-		index++;
-	}
-	s[index] = '\0';
-	return (ft_rev_str(s));
 }
