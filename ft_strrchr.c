@@ -18,9 +18,9 @@ char	*ft_strrchr(const char *s, int c)
 	char	*pointer;
 
 	rev_index = ft_strlen(s);
-	if (!rev_index)
+	if (!rev_index && c)
 		return (NULL);
-	else if (!c)
+	else if (!c || !rev_index)
 	{
 		pointer = (char *)&s[rev_index];
 		return (pointer);
