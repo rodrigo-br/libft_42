@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 02:45:28 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/07 02:45:33 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/08 17:44:23 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	length;
+	int		length;
+	t_list	*aux_lst;
 
 	length = 0;
-	while (lst)
+	aux_lst = lst;
+	while (aux_lst)
 	{
-		lst = lst->next;
+		aux_lst = aux_lst->next;
 		length++;
 	}
 	return (length);

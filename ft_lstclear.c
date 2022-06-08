@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/27 01:03:12 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/01 17:58:51 by ralves-b         ###   ########.fr       */
+/*   Created: 2022/06/07 22:56:03 by ralves-b          #+#    #+#             */
+/*   Updated: 2022/06/08 01:48:55 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	return ((ft_isalpha(c) != 0) * 8 + (ft_isdigit(c) != 0) * 8);
+	t_list	*aux_lst;
+	t_list	*aux_free;
+
+	if (lst == NULL)
+		return ;
+	aux_lst = *lst;
+	while (aux_lst != NULL)
+	{
+		aux_free = aux_lst->next;
+		ft_lstdelone(aux_lst, del);
+		aux_lst = aux_free;
+	}
+	*lst = NULL;
 }

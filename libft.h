@@ -16,8 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# include <stdio.h> // DELETAR
-
 // ------------ PART 1 ---------------------------------
 
 /**
@@ -428,9 +426,9 @@ void	ft_putnbr_fd(int n, int fd);
 
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 /**
  * @brief Allocates (with malloc(3)) and returns a new node.
@@ -440,7 +438,7 @@ typedef struct s_list
  * @param content The content to create the node with.
  * @return The new node 
  */
-t_list *ft_lstnew(void *content);
+t_list	*ft_lstnew(void *content);
 
 /**
  * @brief 		Adds the node ’new’ at the beginning of the list.
@@ -449,21 +447,21 @@ t_list *ft_lstnew(void *content);
  * @param new 	The address of a pointer to the node to be
  *				added to the list.
  */
-void ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 /**
  * @brief 		Counts the number of nodes in a list.
  * @param lst 	The beginning of the list.
  * @return 		The length of the list
  */
-int ft_lstsize(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 /**
  * @brief 		Returns the last node of the list.
  * @param lst 	The beginning of the list.
  * @return 		Last node of the list
  */
-t_list *ft_lstlast(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 
 /**
  * @brief 		Adds the node ’new’ at the end of the list.
@@ -472,7 +470,7 @@ t_list *ft_lstlast(t_list *lst);
  * @param new 	The address of a pointer to the node to be
  *				added to the list.
  */
-void ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 /**
  * @brief 		Deletes and frees the given node and every
@@ -484,7 +482,7 @@ void ft_lstadd_back(t_list **lst, t_list *new);
  * @param del 	The address of the function used to delete
  *				the content.
  */
-void ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
 /**
  * @brief 		Deletes and frees the given node and every
@@ -496,7 +494,7 @@ void ft_lstdelone(t_list *lst, void (*del)(void*));
  * @param del 	The address of the function used to delete
  *				the content of the node.
  */
-void ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
 
 /**
  * @brief 		Iterates the list ’lst’ and applies the function
@@ -505,7 +503,7 @@ void ft_lstclear(t_list **lst, void (*del)(void*));
  * @param f 	The address of the function used to iterate on
  *				the list.
  */
-void ft_lstiter(t_list *lst, void (*f)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**
  * @brief 		Iterates the list ’lst’ and applies the function
@@ -520,6 +518,6 @@ void ft_lstiter(t_list *lst, void (*f)(void *));
  *				the content of a node if needed.
  * @return 		The new list or NULL if the allocation fails. 
  */
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
