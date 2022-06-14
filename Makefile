@@ -43,11 +43,11 @@ bonus: ${BONUS_OBJS} ${H_SRC}
 			ar -rsc ${NAME} $^
 
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${BONUS_OBJS}
 
 fclean:	clean
 		${RM} ${NAME}
 
 re:		fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re bonus

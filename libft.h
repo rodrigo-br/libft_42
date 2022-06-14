@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:46:38 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/06/04 02:12:11 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/06/10 18:08:05 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-// ------------ PART 1 ---------------------------------
+// ------------ PART 1 --------------------------------
 
 /**
  * @brief 	Checks for an alphabetic character;
@@ -430,6 +430,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+
 /**
  * @brief Allocates (with malloc(3)) and returns a new node.
  *The member variable ’content’ is initialized with
@@ -473,11 +474,11 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 
 /**
- * @brief 		Deletes and frees the given node and every
- *				successor of that node, using the function ’del’
- *				and free(3).
- *				Finally, the pointer to the list must be set to
- *				NULL.
+ * @brief 		Takes as a parameter a node and frees the memory of
+ *				the node’s content using the function ’del’ given
+ *				as a parameter and free the node. The memory of
+ *				’next’ must not be freed.
+
  * @param lst 	The node to free.
  * @param del 	The address of the function used to delete
  *				the content.
