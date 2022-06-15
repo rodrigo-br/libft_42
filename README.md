@@ -12,9 +12,9 @@
 |[isprint](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_isprint.c)|[strjoin](https://github.com/rodrigo-br/libft_42/blob/main/part_2/ft_strjoin.c)|[lstnew](https://github.com/rodrigo-br/libft_42/blob/main/bonus/ft_lstnew.c)|
 |[memchr](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_memchr.c)|[strmapi](https://github.com/rodrigo-br/libft_42/blob/main/part_2/ft_strmapi.c)|[lstsize](https://github.com/rodrigo-br/libft_42/blob/main/bonus/ft_lstsize.c)|
 |[memcmp](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_memcmp.c)|[strtrim](https://github.com/rodrigo-br/libft_42/blob/main/part_2/ft_strtrim.c)|
-|[memcpy](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_memcpy.c)|[strtrim](https://github.com/rodrigo-br/libft_42/blob/main/part_2/ft_strtrim.c)|
-|[memmove](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_memmove.c)|[strtrim](https://github.com/rodrigo-br/libft_42/blob/main/part_2/ft_strtrim.c)|
-|[memset](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_memset.c)|[substr](https://github.com/rodrigo-br/libft_42/blob/main/part_2/ft_substr.c)|
+|[memcpy](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_memcpy.c)|[substr](https://github.com/rodrigo-br/libft_42/blob/main/part_2/ft_substr.c)|
+|[memmove](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_memmove.c)|
+|[memset](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_memset.c)|
 |[strchr](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_strchr.c)|
 |[strdup](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_strdup.c)|
 |[strlcat](https://github.com/rodrigo-br/libft_42/blob/main/part_1/ft_strlcat.c)|
