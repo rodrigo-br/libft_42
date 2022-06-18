@@ -17,22 +17,12 @@ int	ft_atoi(const char *nptr)
 	int	signal;
 	int	result;
 
-	signal = 1;
 	result = 0;
 	while ((*nptr >= 9 && *nptr <= 13) || (*nptr == ' '))
 		nptr++;
-	if (*nptr == '-' || *nptr == '+')
-	{
-		if (*nptr == '-')
-			signal = -1;
-		nptr++;
-	}
+	signal = ((ft_isdigit(*nptr) || *nptr == '+') - (*nptr == '-'));
+	nptr += (*nptr == '-' || *nptr == '+');
 	while (ft_isdigit(*nptr))
-	{
-		result = result * 10 + (*nptr - '0');
-		nptr++;
-	}
-	if (result == 0)
-		return (0);
+		result = result * 10 + (*nptr++ - '0');
 	return (result * signal);
 }
