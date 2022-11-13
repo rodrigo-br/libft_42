@@ -36,7 +36,23 @@ echo '#include "printf/ft_printf.h"' > main.c
 
 (write a main)
 
-cc main.c libft.a -lbsd && ./a.out
+cc main.c libft.a && ./a.out
+```
+
+Suggestion of main:
+
+```C
+#include "printf/ft_printf.h"
+
+int main(void)
+{
+	char 	*a = "125";
+	int		x;
+
+	x = ft_atoi(a);
+	ft_printf("%d\n", x - 83);
+	return (0);
+}
 ```
 
 <br>
