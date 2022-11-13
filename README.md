@@ -608,3 +608,5 @@ typedef struct s_list
 </details>
 
 <br>
+
+Checkout the <a href="https://github.com/rodrigo-br/printf_42">printf function repository</a> for more information about the ft_printf.
