@@ -1,7 +1,7 @@
 # Libft 42 Project
 
 ## What is it?
----
+
 This project is about coding a C library.
 It contain a lot of general purpose functions your programs will rely upon
 
@@ -12,7 +12,7 @@ helpful since you will use it in your next C school assignments
 <br><br>
 
 ### A few rules
----
+
 <p>As most of 42's Projects, this one also have a few rules (such as the prohibition of the use of 
 <span style="color:#33DAFF">for</span>,
 <span style="color:#33DAFF"> VLA</span>,
@@ -22,7 +22,7 @@ and others).</p>
 <br><br>
 
 ## How to use it
----
+
 Clone
 cd libft_42
 make
@@ -30,7 +30,7 @@ touch main.cc
 cc main.cc libft.a -lbsd && ./a.out
 
 ## Part 1 - Libc functions
----
+
 This part is about recreate a set of functions from the libc. The functions will have the same prototypes and the same behaviors as the originals. They must comply with the way they are defined in their man. The only difference will be their names. They
 will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 
@@ -46,8 +46,8 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
               tional characters for which  isalpha()
               is  true—letters which are neither up‐
               percase nor lowercase.</p>
-	
 	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_isalpha.c">ft_isalpha</a>
+	
 <hr>
 </details>
 
