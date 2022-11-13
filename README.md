@@ -100,7 +100,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>isprint</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_isprint.c">isprint</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_isprint.c">ft_isprint</a>
 	<p>checks for any printable character in‐
               cluding space.</p>
 <hr>
@@ -111,7 +111,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>strlen</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strlen.c">strlen</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strlen.c">ft_strlen</a>
 	<p>calculates  the  length  of the
        string pointed to by s, excluding the  terminating  null
        byte ('\0').</p>
@@ -123,7 +123,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>memset</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memset.c">memset</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memset.c">ft_memset</a>
 	<p>fills  the first n bytes of the
        memory area pointed to by s with the constant byte c.</p>
 <hr>
@@ -134,7 +134,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>bzero</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_bzero.c">bzero</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_bzero.c">ft_bzero</a>
 	<p>erases the data in the n bytes of
        the memory starting at the location pointed to by s,  by
        writing zeros (bytes containing '\0') to that area.</p>
@@ -146,7 +146,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>memcpy</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memcpy.c">memcpy</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memcpy.c">ft_memcpy</a>
 	<p>copies n bytes from memory area
        src to memory area dest.   The  memory  areas  must  not
        overlap.  Use memmove(3) if the memory areas do overlap.</p>
@@ -158,7 +158,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>memmove</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memmove.c">memmove</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memmove.c">ft_memmove</a>
 	<p>copies n bytes from memory area
        src to memory area dest.  The memory areas may  overlap:
        copying takes place as though the bytes in src are first
@@ -173,7 +173,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>strlcpy</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strlcpy.c">strlcpy</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strlcpy.c">ft_strlcpy</a>
 	<p>copies up to size - 1 characters
      from the NUL-terminated string src to dst, NUL-terminating
      the result.</p>
@@ -185,7 +185,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>strlcat</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strlcat.c">strlcat</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strlcat.c">ft_strlcat</a>
 	<p>appends the NUL-terminated string
      src to the end of dst.  It will append at most size -
      strlen(dst) - 1 bytes, NUL-terminating the result.</p>
@@ -197,7 +197,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>toupper</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_toupper.c">toupper</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_toupper.c">ft_toupper</a>
 	<p>convert lowercase letters to uppercase</p>
 <hr>
 </details>
@@ -207,7 +207,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>tolower</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_toupper.c">tolower</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_toupper.c">ft_tolower</a>
 	<p>convert uppercase letters to lowercase.</p>
 <hr>
 </details>
@@ -217,7 +217,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>strchr</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strchr.c">strchr</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strchr.c">ft_strchr</a>
 	<p>returns a pointer to the first oc‐
        currence of the character c in the string s.</p>
 <hr>
@@ -228,7 +228,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>strrchr</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strrchr.c">strrchr</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strrchr.c">ft_strrchr</a>
 	<p>function returns a pointer to the last oc‐
        currence of the character c in the string s.</p>
 <hr>
@@ -239,7 +239,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>strncmp</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strncmp.c">strncmp</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strncmp.c">ft_strncmp</a>
 	<p>compares the two strings s1 and
        s2.  The locale is not taken into account.  It returns an inte‐
        ger less than, equal to, or greater than zero if  s1  is
@@ -253,7 +253,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>memchr</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memchr.c">memchr</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memchr.c">ft_memchr</a>
 	<p>scans the initial n bytes  of  the
        memory area pointed to by s for the first instance of c.
        Both c and the bytes of the memory area pointed to by  s
@@ -266,7 +266,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>memcmp</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memcmp.c">memcmp</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_memcmp.c">ft_memcmp</a>
 	<p>compares the first n bytes (each
        interpreted as unsigned char) of the memory areas s1 and
        s2.</p>
@@ -278,7 +278,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>strnstr</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strnstr.c">strnstr</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strnstr.c">ft_strnstr</a>
 	<p>locates the first occurrence of the
      null-terminated string little in the string big, where not
      more than len characters are searched.  Characters that
@@ -291,7 +291,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>atoi</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_atoi.c">atoi</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_atoi.c">ft_atoi</a>
 	<p>converts the initial portion of the
        string pointed to by nptr to int.</p>
 <hr>
@@ -302,7 +302,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>calloc</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_calloc.c">calloc</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_calloc.c">ft_calloc</a>
 	<p>allocates memory for an  array  of
        nmemb  elements of size bytes each and returns a pointer
        to the allocated memory.  The memory is set to zero.  If
@@ -319,7 +319,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <details>
 	<summary>strdup</summary>
 <hr>
-	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strdup.c">strdup</a>
+	<a href="https://github.com/rodrigo-br/libft_42/blob/main/libft/part_1/ft_strdup.c">ft_strdup</a>
 	<p>returns a pointer to a new  string
        which  is  a  duplicate of the string s.  Memory for the
        new string is obtained with malloc(3), and can be  freed
