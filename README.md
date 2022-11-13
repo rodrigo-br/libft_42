@@ -39,6 +39,8 @@ echo '#include "printf/ft_printf.h"' > main.c
 cc main.c libft.a -lbsd && ./a.out
 ```
 
+<br>
+
 ## Part 1 - Libc functions
 
 This part is about recreate a set of functions from the libc. The functions will have the same prototypes and the same behaviors as the originals. They must comply with the way they are defined in their man. The only difference will be their names. They
@@ -327,8 +329,7 @@ will begin with the ’ft_’ prefix. For instance, strlen becomes ft_strlen.
 <hr>
 </details>
 
-<br><br><br>
-
+<br><br>
 
 ## Part 2 - Additional functions
 
@@ -466,9 +467,6 @@ or that are part of it but in a different form.
 <hr>
 </details>
 
-<br>
-
-
 <br><br>
 
 ## Bonus Part
@@ -479,6 +477,14 @@ The members of the t_list struct are:
 - <b>content</b>: The data contained in the node.
 void * allows to store any kind of data.
 - <b>next</b>: The address of the next node, or NULL if the next node is the last one.
+
+```C
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+```
 
 <br>
 
