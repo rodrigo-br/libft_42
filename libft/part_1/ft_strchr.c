@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:26:40 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/07/14 18:05:03 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/11/20 09:20:12 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ char	*ft_strchr(const char *s, int c)
 		pointer = (char *)s;
 		return (pointer);
 	}
-	else
-		return (NULL);
+	return (NULL);
 }

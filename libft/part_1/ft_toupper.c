@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:55:37 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/07/14 18:05:29 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/11/20 09:19:07 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ int	ft_toupper(int c)
 		c = (unsigned char)c;
 		return ((int)c);
 	}
-	else
-		return (c);
+	return (c);
 }

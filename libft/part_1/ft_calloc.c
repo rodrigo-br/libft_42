@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 01:06:29 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/07/14 18:04:21 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/11/20 00:01:38 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int		over_handling;
+	int		target_size;
 	void	*result;
 
-	over_handling = nmemb * size;
-	if (nmemb != 0 && over_handling / nmemb != size)
+	target_size = nmemb * size;
+	if (target_size != 0 && target_size / nmemb != size)
 		return (NULL);
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	result = malloc(nmemb * size);
-	ft_memset(result, 0, (nmemb * size));
+	result = malloc(target_size);
+	ft_bzero(result, target_size);
 	return (result);
 }

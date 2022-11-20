@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:13:07 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/07/14 18:05:27 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/11/20 09:19:00 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ int	ft_tolower(int c)
 		c = (unsigned char)c;
 		return ((int)c);
 	}
-	else
-		return (c);
+	return (c);
 }
