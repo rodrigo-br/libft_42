@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 06:37:32 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/07/14 18:05:39 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/11/20 11:30:06 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,7 @@ static char	*ft_malloc_size(int number)
 	char	*s;
 	int		counter;
 
-	counter = 0;
-	if (number < 0)
-		counter++;
+	counter = (number < 0);
 	while (number / 10 != 0)
 	{
 		counter++;
@@ -64,17 +62,14 @@ static char	*ft_rev_str(char *s)
 {
 	int		index;
 	int		len;
-	char	aux;
 
-	index = 0;
-	if (s[0] == '-')
-		index++;
+	index = (s[0] == '-');
 	len = ft_strlen(s) - 1;
 	while (index < len)
 	{
-		aux = s[index];
-		s[index] = s[len];
-		s[len] = aux;
+		s[index] = s[index] ^ s[len];
+		s[len] = s[index] ^ s[len];
+		s[index] = s[index] ^ s[len];
 		index++;
 		len--;
 	}
