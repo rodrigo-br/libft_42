@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 01:18:30 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/07/14 18:05:50 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/11/20 09:24:47 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,10 @@ static size_t	ft_foward_index(char const *str, char c, size_t *i)
 
 	s_i = 0;
 	while (str[*i] == c && str[*i])
-	{
 		*i = *i + 1;
-	}
 	s_i = *i;
 	while (str[*i] != c && str[*i])
-	{
 		*i = *i + 1;
-	}
 	return (s_i);
 }
 

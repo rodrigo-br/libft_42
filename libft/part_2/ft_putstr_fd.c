@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:30:18 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/07/14 18:05:47 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/11/20 09:24:05 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-		write(fd, &*s++, 1);
+	write(fd, s, ft_strlen(s));
 }

@@ -6,7 +6,7 @@
 /*   By: ralves-b <ralves-b@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 01:55:19 by ralves-b          #+#    #+#             */
-/*   Updated: 2022/07/14 18:03:55 by ralves-b         ###   ########.fr       */
+/*   Updated: 2022/11/20 09:34:02 by ralves-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {	
-	new->next = *lst;
+	if (!new)
+		return ;
+	if (*lst)
+		new->next = *lst;
 	*lst = new;
 }
