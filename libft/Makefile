@@ -35,7 +35,7 @@ RM			=	rm -f
 .c.o:
 		cc ${FLAGS} -c $< -o ${<:.c=.o} 
 
-$(NAME):	${OBJS} ${H_SRC}
+$(NAME):	${OBJS} ${BONUS_OBJS} ${H_SRC}
 			ar -rcs $@ $^
 
 all: ${NAME}
